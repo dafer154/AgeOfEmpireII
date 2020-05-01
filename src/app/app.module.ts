@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CivilizationsComponent } from './civilizations/civilizations.component';
 import { UnitsComponent } from './units/units.component';
@@ -22,7 +22,8 @@ import { VideoAgeComponent } from './video-age/video-age.component';
     VideoAgeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

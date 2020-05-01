@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AgeDataService } from '../age-data.service';
 
 @Component({
   selector: 'app-civilizations',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CivilizationsComponent implements OnInit {
 
-  constructor() { }
+  civilizations = [];
+
+
+  constructor(private dataService: AgeDataService) { }
 
   ngOnInit(): void {
+    this.getCivilizations();
+  }
+
+  getCivilizations() {
+    this.dataService.getCivilizations().subscribe(res => {
+      console.log("civilizations", res)
+    })
   }
 
 }
