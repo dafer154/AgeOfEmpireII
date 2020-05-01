@@ -19,10 +19,11 @@ export class AgeDataService {
 
 
   getCivilizations(): Observable<any> {
-    return this._http.get(`${environment.v2.api_url}/civilizations`, {
+    return this._http.get(`${environment.v2.apiUrl}/civilizations`, {
       headers: {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*' ,
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-        'Access-Control-Allow-Origin' : 'localhost:4200'
       }
     }).pipe(
       map(res => {
