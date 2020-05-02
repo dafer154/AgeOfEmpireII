@@ -1,0 +1,34 @@
+.image {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg)
+        center
+        center;
+    background-size: cover;
+    height: 184px;
+    position: relative;
+    width: 192px;
+}
+
+.hexagon {
+    clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+    margin-left: -2.9%;
+}
+.mask {
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+    border: solid black;
+}
+
+.wrapp-images{
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+}

@@ -34,42 +34,54 @@ export class AgeDataService {
     );
   }
 
-  // getUserByEmail(email: any): Observable<any> {
-  //   return this.http.get(Users.VALIDATEEMAIL + email, { observe: 'response' }).pipe(
-  //     map(res => {
-  //       return res;
-  //     }, err => {
-  //       return err;
-  //     })
-  //   );
-  // }
 
-  // getUnits() {
-  //   return this._http.get<Units>(`${this.apiAge}/units`,
-  //     {
-  //       headers: {
-  //         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-  //       }
-  //     }).toPromise();
-  // }
+  getUnits() : Observable<any> {
+    return this._http.get(`${environment.v2.apiUrl}/units`, {
+      headers: {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*' ,
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      }
+    }).pipe(
+      map(res => {
+        return res;
+      }, err => {
+        return err;
+      })
+    );
+  }
 
-  // getTechnologies() {
-  //   return this._http.get<Technologies>(`${this.apiAge}/technologies`,
-  //   {
-  //     headers: {
-  //       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-  //     }
-  //   }).toPromise();
-  // }
+  getTechnologies() : Observable<any> {
+    return this._http.get(`${environment.v2.apiUrl}/technologies`, {
+      headers: {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*' ,
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      }
+    }).pipe(
+      map(res => {
+        return res;
+      }, err => {
+        return err;
+      })
+    );
+  }
 
-  // getStructures() {
-  //   return this._http.get<Structures>(`${this.apiAge}/structures`,
-  //   {
-  //     headers: {
-  //       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-  //     }
-  //   }).toPromise();
-  // }
+  getStructures(): Observable<any> {
+    return this._http.get(`${environment.v2.apiUrl}/structures`, {
+      headers: {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*' ,
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      }
+    }).pipe(
+      map(res => {
+        return res;
+      }, err => {
+        return err;
+      })
+    );
+  }
 
 
 

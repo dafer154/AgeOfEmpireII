@@ -1,1 +1,19 @@
-<p>units works!</p>
+<div class="wrapp-civilizations">
+    <h1>UNITS</h1>
+
+    <div class="container">
+        <div class="wrapp-images">
+            
+            <div *ngFor="let unit of units; let i = index" class="image hexagon"
+            
+            >
+                <div class="mask" (click)="selectUnits(unit)"></div>
+            </div>
+        </div>
+        <div class="description">
+            <h1>{{unit.name}}</h1>
+            <span>Description</span>
+        </div>
+    </div>
+
+</div>

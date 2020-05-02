@@ -1,1 +1,20 @@
-<p>technologies works!</p>
+<div class="wrapp-civilizations">
+    <h1>TECHNOLOGIES</h1>
+
+    <div class="container">
+        <div class="wrapp-images">
+
+            <div *ngFor="let technology of technologies; let i = index" class="image hexagon">
+                <div class="mask" (click)="selectTechnologies(technology)"></div>
+            </div>
+        </div>
+        <div class="description">
+            <h1>{{technology.name}}</h1>
+            <span>Description</span>
+        </div>
+    </div>
+
+
+
+
+</div>
