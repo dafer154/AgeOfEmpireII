@@ -1,20 +1,38 @@
 <div class="wrapp-civilizations">
-    <h1>TECHNOLOGIES</h1>
+    <h1 class="title-app">TECHNOLOGIES</h1>
 
     <div class="container">
         <div class="wrapp-images">
-
-            <div *ngFor="let technology of technologies; let i = index" class="image hexagon">
-                <div class="mask" (click)="selectTechnologies(technology)"></div>
+            <div class="hexagon-wrapp" *ngFor="let technology of technologies; let i = index">
+                <div class="title-image">
+                    <span>{{technology.name}}</span>
+                </div>
+                <div class="image hexagon"
+                    [ngStyle]="{'background':' url(' + urlImg + ') center center'}">
+                    <div class="mask" (click)="selectTechnology(technology)"></div>
+                </div>
             </div>
+
         </div>
         <div class="description">
-            <h1>{{technology.name}}</h1>
-            <span>Description</span>
+            <div class="title-app">
+                <h1>{{technology.name}}</h1>
+            </div>
+            <div class="imageDescription">
+                <img src={{urlImg}} alt="...">
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Description:</span>{{technology.description}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Expansion:</span>{{technology.expansion}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Age</span>{{technology.age}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Build Time</span>{{technology.build_time}}<span></span>
+            </div>
         </div>
     </div>
-
-
-
-
 </div>

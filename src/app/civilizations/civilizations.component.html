@@ -1,23 +1,35 @@
 <div class="wrapp-civilizations">
-    <h1>CIVILIZATIONS</h1>
+    <h1 class="title-app">CIVILIZATIONS</h1>
 
     <div class="container">
         <div class="wrapp-images">
-            
-            <div *ngFor="let civilization of civilizations; let i = index" class="image hexagon"
-            [ngStyle]="{'background':' url(' + urlImg + ') center center'}"
-            >
-                <div class="mask" (click)="selectCivilization(civilization)"></div>
+            <div class="hexagon-wrapp" *ngFor="let civilization of civilizations; let i = index">
+                <div class="title-image">
+                    <span>{{civilization.name}}</span>
+                </div>
+                <div class="image hexagon"
+                    [ngStyle]="{'background':' url(' + iconsCivilizations[i].Shield + ') center center'}">
+                    <div class="mask" (click)="selectCivilization(civilization)"></div>
+                </div>
             </div>
+
         </div>
         <div class="description">
-            <h1>{{civilization.name}}</h1>
-            <img src={{urlImg}} alt="..."/>
-            <span>Description</span>
+            <div class="title-app">
+                <h1>{{civilization.name}}</h1>
+            </div>
+            <div class="imageDescription">
+                <img src={{urlImg}} alt="...">
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Expansion:</span>{{civilization.expansion}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Army Type:</span>{{civilization.army_type}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Team Bonus</span>{{civilization.team_bonus}}<span></span>
+            </div>
         </div>
     </div>
-
-
-
-
 </div>

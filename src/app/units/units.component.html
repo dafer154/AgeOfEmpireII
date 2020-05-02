@@ -1,19 +1,61 @@
 <div class="wrapp-civilizations">
-    <h1>UNITS</h1>
+    <h1 class="title-app">UNITS</h1>
 
     <div class="container">
-        <div class="wrapp-images">
-            
-            <div *ngFor="let unit of units; let i = index" class="image hexagon"
-            
-            >
-                <div class="mask" (click)="selectUnits(unit)"></div>
+
+        <div class="description">
+            <div class="title-app">
+                <h1>{{unit.name}}</h1>
+            </div>
+            <div class="imageDescription">
+                <img src={{urlImg}} alt="...">
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Description:</span>{{unit.description}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Expansion:</span>{{unit.expansion}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Age</span>{{unit.age}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Build Time</span>{{unit.build_time}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Reload Time</span>{{unit.reload_time}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Attack Delay</span>{{unit.attack_delay}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Movement Rate</span>{{unit.movement_rate}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Line Of Sight</span>{{unit.line_of_sight}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Hit Points</span>{{unit.hit_points}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Range</span>{{unit.range}}<span></span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Attack</span>{{unit.attack}}<span></span>
             </div>
         </div>
-        <div class="description">
-            <h1>{{unit.name}}</h1>
-            <span>Description</span>
-        </div>
-    </div>
 
+        <div class="wrapp-images">
+
+            <div class="hexagon-wrapp" *ngFor="let unit of units; let i = index">
+                <div class="title-image">
+                    <span>{{unit.name}}</span>
+                </div>
+                <div class="image hexagon" [ngStyle]="{'background':' url(' + urlImg + ') center center'}">
+                    <div class="mask" (click)="selectUnit(unit)"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
