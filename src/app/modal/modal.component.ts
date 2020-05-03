@@ -35,4 +35,13 @@ export class ModalComponent implements OnInit {
       email: [null, [Validators.required, Validators.email]],
     });
   }
+
+  createUser() {
+    if (this.registerForm.valid) {
+      console.log('success')
+      this.onNoClick();
+    } else {
+      console.error('Eroor');
+    }
+  }
 }

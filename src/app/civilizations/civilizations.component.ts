@@ -23,8 +23,8 @@ export class CivilizationsComponent implements OnInit {
 
   getCivilizations() {
     this.dataService.getCivilizations().subscribe(res => {
-      this.civilizations = res.civilizations;
       this.civilization = res.civilizations[0]
+      this.civilizations = res.civilizations;
       this.selectImage(res.civilizations[0].name)
     })
   }
