@@ -1,1 +1,59 @@
-<p>modal works!</p>
+<h1 mat-dialog-title>Formulario</h1>
+<!-- <div mat-dialog-content>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.email" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.phone" placeholder="Phone">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.comment" placeholder="Comment">
+    </mat-form-field>
+</div> -->
+<form [formGroup]="registerForm">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name" required>
+            <mat-error *ngIf="registerForm.controls.name.hasError('required')">
+                Please enter name
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls.name.hasError('pattern')">
+                Please enter valid last name
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Phone" formControlName="phone" required>
+            <mat-error *ngIf="registerForm.controls.phone.hasError('required')">
+                Please enter Phone
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls.name.hasError('pattern')">
+                Please enter valid Phone
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="registerForm.controls.email.hasError('required')">
+                Please enter Email
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls.email.hasError('email')">
+                Please enter valid Email
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Name" formControlName="comment" required>
+            <mat-error *ngIf="registerForm.controls.comment.hasError('required')">
+                Please enter Comment
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls.name.hasError('pattern')">
+                Please enter valid Comment
+            </mat-error>
+        </mat-form-field>
+    </div>
+</form>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Save & Exit</button>
+</div>

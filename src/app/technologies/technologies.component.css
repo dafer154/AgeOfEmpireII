@@ -18,8 +18,13 @@
     margin-left: -4%;
 }
 
+.hexagon:hover{
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
 .mask {
-    background-color: aliceblue;
+    background-color: #1a6920;
     position: absolute;
     top: 0;
     left: 0;
