@@ -21,14 +21,12 @@ export class CivilizationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCivilizations();
-    console.log("weee", this.iconsCivilizations)
   }
 
   getCivilizations() {
     this.dataService.getCivilizations().subscribe(res => {
       this.civilizations = res.civilizations;
       this.civilization = res.civilizations[0]
-      console.log('jujuj', this.civilization.name)
       this.selectImage(res.civilizations[0].name)
     })
   }

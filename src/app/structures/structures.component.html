@@ -1,23 +1,58 @@
 <div class="wrapp-civilizations">
-    <h1>STRUCTURES</h1>
+    <h1 class="title-app">STRUCTURES</h1>
 
     <div class="container">
-        <div class="wrapp-images">
-            
-            <div *ngFor="let structure of structures; let i = index" class="image hexagon"
-            
-            >
-                <div class="mask" (click)="selectStructures(structure)"></div>
+
+        <div class="description">
+            <div class="title-app">
+                <h1>{{structure.name}}</h1>
+            </div>
+            <div class="imageDescription">
+                <img src={{urlImg}} alt="...">
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Description:</span><span>{{structure.description}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Expansion:</span><span>{{structure.expansion}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Age:</span><span>{{structure.age}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Build Time:</span><span>{{structure.build_time}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Hit Points:</span><span>{{structure.hit_points}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Line Of Sight:</span><span>{{structure.line_of_sight}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Armor:</span><span>{{structure.armor}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Range:</span><span>{{structure.range}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Attack:</span><span>{{structure.attack}}</span>
+            </div>
+            <div class="wrapDescription">
+                <span class="mainSpan">Reload Time:</span><span>{{structure.reload_time}}</span>
             </div>
         </div>
-        <div class="description">
-            <h1>{{structure.name}}</h1>
 
-            <span>Description</span>
+        <div class="wrapp-images">
+
+            <div class="hexagon-wrapp" *ngFor="let structure of structures; let i = index">
+                <div class="title-image">
+                    <span>{{structure.name}}</span>
+                </div>
+                <div class="image hexagon" [ngStyle]="{'background':' url(' + urlImg + ') center center'}">
+                    <div class="mask" (click)="selectStructure(structure)"></div>
+                </div>
+            </div>
         </div>
+
     </div>
-
-
-
-
 </div>

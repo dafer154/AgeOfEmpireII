@@ -10,7 +10,7 @@ export class StructuresComponent implements OnInit {
 
   structures = [];
   structure : any;
-  urlImg: string;
+  urlImg = '../../assets/logos/ageImage.jpg';
 
 
   constructor(private dataService: AgeDataService) { }
@@ -24,14 +24,19 @@ export class StructuresComponent implements OnInit {
       this.structures = res.structures;
       this.structure = res.structures[0]
       console.log('jujuj', this.structure.name)
-      //this.selectImage(res.civilizations[0].name)
+      this.selectImage()
     })
   }
 
 
-  selectStructures(structure: any) {
+  selectStructure(structure: any) {
     this.structure = structure;
-    //this.selectImage(structure.name);
+    this.selectImage();
+  }
+
+  
+  selectImage() {
+    return this.urlImg = '../../assets/logos/ageImage.jpg';
   }
 
 }

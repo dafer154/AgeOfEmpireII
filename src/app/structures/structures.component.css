@@ -1,17 +1,23 @@
+.wrapp-civilizations{
+    background: #dd7272;
+    border: solid 9px brown;
+}
+
 .image {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg)
+    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg)
         center
-        center;
+        center; */
     background-size: cover;
-    height: 184px;
+    height: 119px;
     position: relative;
-    width: 192px;
+    width: 139px;
 }
 
 .hexagon {
     clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
-    margin-left: -2.9%;
+    margin-left: -4%;
 }
+
 .mask {
     background-color: aliceblue;
     position: absolute;
@@ -27,8 +33,49 @@
     display: flex;
     width: 50%;
     flex-wrap: wrap;
+    padding-left: 9%;
 }
 
 .container{
     display: flex;
+}
+
+.title-image{
+    text-align: center;
+    font-weight: bold;
+}
+
+.title-app{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: solid 3px #c16f6f;
+    margin-bottom: 5%;
+}
+
+.imageDescription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    padding-bottom: 4%;
+}
+
+.description{
+    width: 42%;
+    padding-left: 9%;
+    padding-right: 3%;
+}
+
+.wrapDescription{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;  
+}
+
+.mainSpan{
+    font-size: 22px;
+    font-weight: bold;
+
 }
