@@ -13,16 +13,14 @@ import { map } from 'rxjs/operators';
 })
 export class AgeDataService {
 
-  //apiAge = 'https://age-of-empires-2-api.herokuapp.com/api/v1';
-
   constructor(private _http: HttpClient) { }
 
 
   getCivilizations(): Observable<any> {
     return this._http.get(`${environment.v2.apiUrl}/civilizations`, {
       headers: {
-        'Content-Type': 'application/json', 
-        'Access-Control-Allow-Origin': '*' ,
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       }
     }).pipe(
@@ -35,11 +33,11 @@ export class AgeDataService {
   }
 
 
-  getUnits() : Observable<any> {
+  getUnits(): Observable<any> {
     return this._http.get(`${environment.v2.apiUrl}/units`, {
       headers: {
-        'Content-Type': 'application/json', 
-        'Access-Control-Allow-Origin': '*' ,
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       }
     }).pipe(
@@ -51,11 +49,11 @@ export class AgeDataService {
     );
   }
 
-  getTechnologies() : Observable<any> {
+  getTechnologies(): Observable<any> {
     return this._http.get(`${environment.v2.apiUrl}/technologies`, {
       headers: {
-        'Content-Type': 'application/json', 
-        'Access-Control-Allow-Origin': '*' ,
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       }
     }).pipe(
@@ -70,8 +68,8 @@ export class AgeDataService {
   getStructures(): Observable<any> {
     return this._http.get(`${environment.v2.apiUrl}/structures`, {
       headers: {
-        'Content-Type': 'application/json', 
-        'Access-Control-Allow-Origin': '*' ,
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       }
     }).pipe(

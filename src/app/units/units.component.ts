@@ -25,7 +25,6 @@ export class UnitsComponent implements OnInit {
     this.dataService.getUnits().subscribe(res => {
       this.units = res.units;
       this.unit = res.units[0]
-      console.log('jujuj', this.unit.name)
       this.selectImage()
     })
   }

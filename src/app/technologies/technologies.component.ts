@@ -22,7 +22,6 @@ export class TechnologiesComponent implements OnInit {
     this.dataService.getTechnologies().subscribe(res => {
       this.technologies = res.technologies;
       this.technology = res.technologies[0]
-      console.log('jujuj', this.technology.name)
       this.selectImage()
     })
   }

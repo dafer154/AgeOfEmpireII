@@ -23,7 +23,6 @@ export class StructuresComponent implements OnInit {
     this.dataService.getStructures().subscribe(res => {
       this.structures = res.structures;
       this.structure = res.structures[0]
-      console.log('jujuj', this.structure.name)
       this.selectImage()
     })
   }

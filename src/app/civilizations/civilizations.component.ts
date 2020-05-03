@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AgeDataService } from '../age-data.service';
-
 import * as civsImages from '../civilizations/imagesCivilizations'
-// import * as unitImages from '../../assets/js/Units';
 
 @Component({
   selector: 'app-civilizations',
@@ -12,7 +10,7 @@ import * as civsImages from '../civilizations/imagesCivilizations'
 export class CivilizationsComponent implements OnInit {
 
   civilizations = [];
-  civilization : any;
+  civilization: any;
   urlImg: string;
   iconsCivilizations = civsImages.civilizations_images;
 
@@ -102,8 +100,5 @@ export class CivilizationsComponent implements OnInit {
         break;
     }
   }
-
-
-
 
 }

@@ -1,0 +1,9 @@
+.top-bar{
+    display: flex;
+    background: #e2f3df;
+}
+
+.image-logo{
+    width: 160px;
+    margin: auto;
+}

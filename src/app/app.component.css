@@ -1,0 +1,14 @@
+.flotant{
+    position: fixed;
+    top: 500px;
+    left: 20px;
+    z-index: 4;
+}
+
+.customButton{
+    width: 145px;
+    height: 44px;
+    color: #f44336;
+    background: #cacace;
+    font-weight: bold;
+}
